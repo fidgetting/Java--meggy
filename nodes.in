@@ -1,0 +1,48 @@
+none formal _i_type|type token|name
+none main_c token|name token|parm _i_stmt|stmt
+none var_de _i_type|type token|name
+none method_de _i_type|type token|name std::vector<formal*>|parm std::vector<var_de*>|vars std::vector<_i_stmt*>|stmt _i_expr|expr
+none class_de token|name std::vector<var_de*>|vars std::vector<method_de*>|meth
+none program main_c|main std::vector<class_de*>|classes
+expr minus _i_expr|l_expr _i_expr|r_expr
+expr equal _i_expr|l_expr _i_expr|r_expr
+expr plus _i_expr|l_expr _i_expr|r_expr
+expr mul _i_expr|l_expr _i_expr|r_expr
+expr and _i_expr|l_expr _i_expr|r_expr
+expr lt _i_expr|l_expr _i_expr|r_expr
+expr array _i_expr|expr _i_expr|idx
+expr button token|literal
+expr call _i_expr|expr token|id std::vector<_i_expr*>|args
+expr cast _i_type|type _i_expr|expr
+expr color token|literal
+expr id token|literal
+expr int token|literal
+expr length _i_expr|expr
+expr new_array _i_type|type _i_expr|expr
+expr new token|literal
+expr not _i_expr|expr
+expr tone token|literal
+expr false
+expr true
+expr this
+stmt array_asn _i_expr|ref _i_expr|idx _i_expr|exp
+stmt asn token|id _i_expr|expr
+stmt block std::vector<_i_stmt*>|stmts
+stmt call _i_expr|expr token|id std::vector<_i_expr*>|args
+stmt if _i_expr|expr _i_stmt|then _i_stmt|els
+stmt while _i_expr|expr _i_stmt|stmt
+type bool
+type button
+type byte
+type color
+type int
+type tone
+type void
+type array _i_type|type
+type class token|name
+expr m_button _i_expr|expr
+expr m_pixel_g _i_expr|x_expr _i_expr|y_expr
+stmt m_aux _i_expr|expr
+stmt m_pixel _i_expr|x_expr _i_expr|y_expr _i_expr|color
+stmt m_tone _i_expr|tone _i_expr|dura
+stmt m_delay _i_expr|expr
