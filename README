@@ -1,0 +1,11 @@
+This is a compiler for the meggy java language presented in my compilers class
+for the spring of 2011 semester. As the language is very similar to standard
+Java, the class originally used Java as the language to write the compiler in.
+In the interest of learning other parser generators, I have started rewritting
+the compiler in C++.
+
+This project is not complete. Currently the compiler can only read a meggy java
+file and produce a dot file for the abstract syntax tree and the symbol table.
+The type checker is a work in progress, and the code generator hasn't beend
+started yet.
+

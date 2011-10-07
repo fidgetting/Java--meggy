@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
   prog->accept(&line);
   prog->accept(&dot);
   prog->accept(&symvisitor);
-  prog->accept(&typevisit);
+  //prog->accept(&typevisit);
 
   symvisitor.table()->dot(sym_ostr);
 
