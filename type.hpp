@@ -65,6 +65,9 @@ class type {
     friend std::ostream& operator<<(std::ostream& ostr, type::types t);
     friend std::ostream& operator<<(std::ostream& ostr, const type& t);
 
+    inline bool is_class() const { return _type == classType; }
+    inline bool is_array() const { return _type == arrayType; }
+
   protected:
 
     types       _type;
